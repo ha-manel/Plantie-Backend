@@ -1,4 +1,4 @@
-class PlantController < ApplicationController
+class PlantsController < ApplicationController
   def index
     render json: {plants: Plant.all}, status: :ok
   end
