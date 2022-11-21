@@ -2,6 +2,9 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.session_store :cookie_store, key: '_plantie_backend'
+  config.middleware.use ActionDispatch::Cookies
+  config.middleware.use config.session_store, config.session_options
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
