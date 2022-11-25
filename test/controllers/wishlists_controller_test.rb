@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PlantControllerTest < ActionDispatch::IntegrationTest
+class WishlistsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
