@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       @wishlist = Plant.joins(:wishlists).where(wishlists: { user_id: session[:user_id] })
       render json: { logged_in: true, user: @current_user, wishlist: @wishlist }
     else
-      render json: { logged_in: false, errors: 'no such user' }, status: :not_found
+      render json: { logged_in: false }
     end
   end
 
