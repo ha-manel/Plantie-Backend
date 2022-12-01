@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: Plantie_Backend_production
   username: Plantie_Backend
   password: <%= ENV["PLANTIE_BACKEND_DATABASE_PASSWORD"] %>
